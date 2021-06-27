@@ -1,0 +1,30 @@
+{
+    "manifest_version": 2,
+    "name": "Test",
+    "version": "1.0.2",
+    "description": "Test",
+    "browser_action": {
+      "default_icon": "icon_128.png",
+      "default_popup": "uis/popup.html"
+    },
+    "background": {
+      "scripts": [
+        "scripts/Vender/jquery-3.6.0.min.js","scripts/utils.js","scripts/background.js"
+      ],
+      "persistent": false
+    },
+    "permissions": [],
+    "icons": {
+      "128": "icon_128.png"
+    },
+    "content_scripts": [
+      {
+        "matches": [
+          "file:///*","https://*/*"
+        ],
+        "js": [
+          "scripts/Vender/jquery-3.6.0.min.js","scripts/utils.js","scripts/contents.js"
+        ]
+      }
+    ]
+  }
